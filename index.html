@@ -62,8 +62,8 @@
         <h2 class="text-center mb-3"><strong>How does JavaScript work?</strong></h2>
         <p class="mb-3">JavaScript is a scripting language that is interpreted rather than compiled. To create web apps
             or web pages,
-            JavaScript uses HTML and CSS. It is an interpreted programming language with dynamic typing, like other
-            scripting languages. An interpreter in the browser reads over the JavaScript code, interprets each line, and
+            JavaScript uses HTML and CSS. It is an interpreted programming language with dynamic typing. The JavaScript
+            code is read by a browser interpreter, which translates each line and
             runs it. Modern browsers use JIT (Just-In-Time) compilation technology which converts JavaScript code to
             executable bytecodes before it runs. It is a single-threaded programming language which means it can only
             manage one task at a time.</p>
@@ -75,7 +75,7 @@
             SessionStorage attributes also allow a key & value combination in a web browser just like localStorage. When
             a document is loaded in a browser tab, a new page session is established and allocated to that tab. That
             tab's page session is only valid for that tab. SessionStorage is a better choice over localStorage because
-            session data is cleared when the browser tab is closed.</p>
+            When the browser tab is closed, the session data is cleared.</p>
         <br><br>
         <h2 class="text-center"><strong>What does JS eventloop do?</strong></h2>
         <p>The runtime model of JavaScript is based on an event loop, which executes the code, collects and processes
@@ -84,6 +84,7 @@
             waits for the Call Stack to be cleared. The event loop is triggered once the Stack is cleared, and it
             examines the Task Queue for available callbacks. If any are found, it moves them to the Call Stack, waits
             for the Call Stack to clear, and then repeats the procedure.</p>
+        <img class="img-fluid rounded mx-auto d-block" src="images/eventloop1.png" alt="">
     </section>
     <footer></footer>
 
