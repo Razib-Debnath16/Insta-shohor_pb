@@ -24,7 +24,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
-            <a class="navbar-brand" href="#">Insta-Sohor</a>
+            <a class="navbar-brand" href="#">JM Insta-Sohor</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -76,6 +76,14 @@
             a document is loaded in a browser tab, a new page session is established and allocated to that tab. That
             tab's page session is only valid for that tab. SessionStorage is a better choice over localStorage because
             session data is cleared when the browser tab is closed.</p>
+        <br><br>
+        <h2 class="text-center"><strong>What does JS eventloop do?</strong></h2>
+        <p>The runtime model of JavaScript is based on an event loop, which executes the code, collects and processes
+            events, and executes queued sub-tasks. This model differs significantly from models written in other
+            languages such as C and Java.Before pushing callbacks from the Task Queue to the Call Stack, the event loop
+            waits for the Call Stack to be cleared. The event loop is triggered once the Stack is cleared, and it
+            examines the Task Queue for available callbacks. If any are found, it moves them to the Call Stack, waits
+            for the Call Stack to clear, and then repeats the procedure.</p>
     </section>
     <footer></footer>
 
