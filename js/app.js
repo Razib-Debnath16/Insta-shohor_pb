@@ -35,29 +35,32 @@ const switchTab = (id) => {
     document.getElementById("posts").style.display = "grid";
     document.getElementById("liked").style.display = "none";
     document.getElementById("reported").style.display = "none";
+    document.getElementById("questions").style.display = "block";
   } else if (id === "liked") {
     document.getElementById("liked").style.display = "block";
     document.getElementById("posts").style.display = "none";
     document.getElementById("reported").style.display = "none";
+    document.getElementById("questions").style.display = "none";
 
     displayLikedPosts();
   } else {
     document.getElementById("reported").style.display = "block";
     document.getElementById("posts").style.display = "none";
     document.getElementById("liked").style.display = "none";
-
+    document.getElementById("questions").style.display = "none";
     displayReportedPosts();
   }
 };
 
 const createPost = (post) => {
-  console.log(post);
+  // console.log(post);
   const image = post.image;
   const div = document.createElement("article");
+  document.getElementById("questions").style.display = "block";
   div.classList.add("post");
-  // solve user image at line 70
-  // solve user-name at line 127
-  // solve user-comment at line 129
+  // solve user image at line 73
+  // solve user-name at line 130
+  // solve user-comment at line 132
 
   div.innerHTML = `
               <div class="post__header">
@@ -139,6 +142,7 @@ const createPost = (post) => {
 const showPosts = (posts) => {
   const productsContainer = document.getElementById("posts");
   productsContainer.innerHTML = "";
+  document.getElementById("questions").style.display = "block";
 
   posts.forEach((post) => {
     const div = createPost(post);
@@ -154,6 +158,7 @@ const displayLikedPosts = () => {
     const div = createPost(post);
     document.getElementById("liked").appendChild(div);
   });
+  document.getElementById("questions").style.display = "none";
 };
 
 const displayReportedPosts = () => {
@@ -164,6 +169,7 @@ const displayReportedPosts = () => {
     const div = createPost(post);
     document.getElementById("reported").appendChild(div);
   });
+  document.getElementById("questions").style.display = "none";
 };
 
 const loadPosts = async () => {
